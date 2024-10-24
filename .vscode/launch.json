@@ -2,7 +2,7 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Launch Windows",
+			"name": "Launch - Windows",
 			"type": "coreclr",
 			"request": "launch",
 			"preLaunchTask": "build-windows",
@@ -12,6 +12,21 @@
 			"console": "internalConsole",
 			"stopAtEntry": false,
 			"justMyCode": false
+		},
+		{
+			"name": "Run and Attach - Android",
+			"type": "mono",
+			"preLaunchTask": "run-android",
+			"request": "attach",
+			"address": "localhost",
+			"port": 10000
+		},
+		{
+			"name": "Attach - Android",
+			"type": "mono",
+			"request": "attach",
+			"address": "localhost",
+			"port": 10000
 		}
 	]
 }

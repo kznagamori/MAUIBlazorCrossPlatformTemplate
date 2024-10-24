@@ -16,6 +16,39 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "build-android",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"-f",
+				"net8.0-android",
+			],
+			"problemMatcher": "$msCompile",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		},
+		{
+			"label": "run-android",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"-t:Run",
+				"-f",
+				"net8.0-android",
+				"-p:AndroidAttachDebugger=true",
+				"-p:AndroidSdbHostPort=10000"
+			],
+			"problemMatcher": "$msCompile",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 		}
 	]
 }
